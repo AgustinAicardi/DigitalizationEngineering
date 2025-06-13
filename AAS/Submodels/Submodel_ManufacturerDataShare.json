@@ -1,0 +1,196 @@
+{
+  "idShort": "ManufacturerDataShare",
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel containing data that could be shared with the manufacturer"
+    }
+  ],
+  "id": "https://example.com/ids/sm/0354_4140_6052_5618",
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "idShort": "usageTime",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Usage Time"
+        },
+        {
+          "language": "es",
+          "text": "Tiempo de Uso"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Usage time of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Tiempo de uso del rack"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/3442_6121_6052_6144"
+          }
+        ]
+      },
+      "value": {
+        "type": "ModelReference",
+        "referredSemanticId": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://example.com/ids/sm/8123_6122_5052_0686"
+            },
+            {
+              "type": "Property",
+              "value": "UsageTime"
+            }
+          ]
+        },
+        "keys": []
+      },
+      "modelType": "ReferenceElement"
+    },
+    {
+      "idShort": "tempOperatingConditions",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Temperature Operating Conditions"
+        },
+        {
+          "language": "es",
+          "text": "Condici\u00F3nes de Temperatura en la Operaci\u00F3n"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Operating temperature of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Temperatura de operaci\u00F3n del rack"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/9542_6121_6052_8985"
+          }
+        ]
+      },
+      "value": {
+        "type": "ModelReference",
+        "referredSemanticId": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://example.com/ids/sm/8123_6122_5052_0686"
+            },
+            {
+              "type": "Property",
+              "value": "Temperature___"
+            }
+          ]
+        },
+        "keys": []
+      },
+      "modelType": "ReferenceElement"
+    },
+    {
+      "idShort": "failures",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Failures"
+        },
+        {
+          "language": "es",
+          "text": "Fallas"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Failures or structural deformation found during maintenance"
+        },
+        {
+          "language": "es",
+          "text": "Fallas o deformaciones estructurales encontradas durante el mantenimiento"
+        }
+      ],
+      "value": {
+        "type": "ModelReference",
+        "referredSemanticId": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://example.com/ids/sm/9025_4140_6052_7699"
+            },
+            {
+              "type": "Property",
+              "value": "Failures"
+            }
+          ]
+        },
+        "keys": []
+      },
+      "modelType": "ReferenceElement"
+    },
+    {
+      "idShort": "taskPerformed",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Task Performed"
+        },
+        {
+          "language": "es",
+          "text": "Tareas Realizadas"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Detail of modifications or repairs done"
+        },
+        {
+          "language": "es",
+          "text": "Detalles de las modificaciones o reparaciones hechas"
+        }
+      ],
+      "value": {
+        "type": "ModelReference",
+        "referredSemanticId": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://example.com/ids/sm/9025_4140_6052_7699"
+            },
+            {
+              "type": "Property",
+              "value": "TaskPerformed"
+            }
+          ]
+        },
+        "keys": []
+      },
+      "modelType": "ReferenceElement"
+    }
+  ],
+  "modelType": "Submodel"
+}

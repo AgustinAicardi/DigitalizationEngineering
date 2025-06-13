@@ -1,0 +1,395 @@
+{
+  "idShort": "OperationalData",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Operational data of the rack1"
+    }
+  ],
+  "id": "https://example.com/ids/sm/8123_6122_5052_0686",
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "idShort": "numberOfProducts",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Number of Products"
+        },
+        {
+          "language": "es",
+          "text": "N\u00FAmero de Productos"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Amount of products on the rack"
+        },
+        {
+          "language": "es",
+          "text": "Cantidad de productos sobre el rack"
+        }
+      ],
+      "valueType": "xs:int",
+      "value": "0",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "currentLoad",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Current Total Load"
+        },
+        {
+          "language": "es",
+          "text": "Carga Total Actual"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Current total load in kg"
+        },
+        {
+          "language": "es",
+          "text": "Carga total actual en kg"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/9332_6121_6052_2224"
+          }
+        ]
+      },
+      "valueType": "xs:double",
+      "value": "0.00",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "surfaceUsed",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Used Surface"
+        },
+        {
+          "language": "es",
+          "text": "Superficie Utilizada"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Percentage of total available surface area used"
+        },
+        {
+          "language": "es",
+          "text": "Porcentaje de la superficie total disponible utilizada"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "0112/2///62720#UAA000#001"
+          }
+        ]
+      },
+      "inputVariables": [
+        {
+          "value": {
+            "idShort": "totalSurface",
+            "displayName": [
+              {
+                "language": "en",
+                "text": "Total Surface"
+              },
+              {
+                "language": "es",
+                "text": "Superficie Total"
+              }
+            ],
+            "description": [
+              {
+                "language": "en",
+                "text": "Total available surface"
+              },
+              {
+                "language": "es",
+                "text": "Superficie total disponible"
+              }
+            ],
+            "semanticId": {
+              "type": "ModelReference",
+              "keys": [
+                {
+                  "type": "ConceptDescription",
+                  "value": "https://example.com/ids/cd/6342_6121_6052_4479"
+                }
+              ]
+            },
+            "value": {
+              "type": "ModelReference",
+              "referredSemanticId": {
+                "type": "ModelReference",
+                "keys": [
+                  {
+                    "type": "Submodel",
+                    "value": "https://example.com/ids/sm/0504_6122_5052_9637"
+                  },
+                  {
+                    "type": "Property",
+                    "value": "SurfaceAvailable___"
+                  }
+                ]
+              },
+              "keys": []
+            },
+            "modelType": "ReferenceElement"
+          }
+        },
+        {
+          "value": {
+            "idShort": "usedSurface",
+            "displayName": [
+              {
+                "language": "en",
+                "text": "Used Surface"
+              },
+              {
+                "language": "es",
+                "text": "Superficie Utilizada"
+              }
+            ],
+            "description": [
+              {
+                "language": "en",
+                "text": "Actual used surface of the rack"
+              },
+              {
+                "language": "es",
+                "text": "Superficie del rack utilizada actualmente"
+              }
+            ],
+            "semanticId": {
+              "type": "ModelReference",
+              "keys": [
+                {
+                  "type": "ConceptDescription",
+                  "value": "0112/2///62720#UAA744#002"
+                }
+              ]
+            },
+            "valueType": "xs:double",
+            "value": "0.00",
+            "modelType": "Property"
+          }
+        }
+      ],
+      "outputVariables": [
+        {
+          "value": {
+            "idShort": "surfaceUsedResult",
+            "displayName": [
+              {
+                "language": "en",
+                "text": "Usage Efficiency Result"
+              },
+              {
+                "language": "es",
+                "text": "Resultado de la Eficiencia de Uso"
+              }
+            ],
+            "description": [
+              {
+                "language": "en",
+                "text": "Result of the usage efficiency calculation"
+              },
+              {
+                "language": "es",
+                "text": "Resultado del c\u00E1lculo de la eficiencia de uso"
+              }
+            ],
+            "semanticId": {
+              "type": "ModelReference",
+              "keys": [
+                {
+                  "type": "ConceptDescription",
+                  "value": "https://example.com/ids/cd/6342_6121_6052_4479"
+                }
+              ]
+            },
+            "valueType": "xs:double",
+            "value": "0.00",
+            "modelType": "Property"
+          }
+        }
+      ],
+      "modelType": "Operation"
+    },
+    {
+      "idShort": "temperature",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Temperature"
+        },
+        {
+          "language": "es",
+          "text": "Temperatura"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Temperature to which the rack is exposed during operation"
+        },
+        {
+          "language": "es",
+          "text": "Temperatura a la que el rack est\u00E1 expuesto durante su operaci\u00F3n"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/9542_6121_6052_8985"
+          }
+        ]
+      },
+      "valueType": "xs:double",
+      "value": "0.00",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "humidity",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Humidity"
+        },
+        {
+          "language": "es",
+          "text": "Humedad"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Humidity to which the rack is exposed during operation"
+        },
+        {
+          "language": "es",
+          "text": "Humedad a la que el rack est\u00E1 expuesto durante su operaci\u00F3n"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/4532_6121_6052_2791"
+          }
+        ]
+      },
+      "valueType": "xs:double",
+      "value": "0.00",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "anomalies",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Anomalies"
+        },
+        {
+          "language": "es",
+          "text": "Anomal\u00EDas"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Anomalies detected in rack monitoring"
+        },
+        {
+          "language": "es",
+          "text": "Anomal\u00EDas detectadas en el monitoreo del rack"
+        }
+      ],
+      "valueType": "xs:string",
+      "value": "\u0022ABC\u0022",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "usageTime",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Usage Time"
+        },
+        {
+          "language": "es",
+          "text": "Tiempo de Uso"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Usage time of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Tiempo de uso del rack"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/3442_6121_6052_6144"
+          }
+        ]
+      },
+      "valueType": "xs:double",
+      "value": "0.00",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "productAlarm",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Product Alarm"
+        },
+        {
+          "language": "es",
+          "text": "Alarma del Producto"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Information and alarm about stored product restock or expiration"
+        },
+        {
+          "language": "es",
+          "text": "Informaci\u00F3n y alarma respecto al restock o vencimiento del producto almacenado"
+        }
+      ],
+      "valueType": "xs:string",
+      "value": "\u0022ALARM\u0022",
+      "modelType": "Property"
+    }
+  ],
+  "modelType": "Submodel"
+}

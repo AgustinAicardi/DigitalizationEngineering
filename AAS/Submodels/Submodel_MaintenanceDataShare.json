@@ -1,0 +1,435 @@
+{
+  "idShort": "MaintenanceDataShare",
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel containing data that could be shared with the maintenance company"
+    }
+  ],
+  "id": "https://example.com/ids/sm/9025_4140_6052_7699",
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "idShort": "lastMaintenanceDate",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Last Maintenance Date"
+        },
+        {
+          "language": "es",
+          "text": "Fecha del \u00DAltimo Mantenimiento"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Date of the last maintenance of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Fecha del \u00FAltimo mantenimiento del rack"
+        }
+      ],
+      "valueType": "xs:date",
+      "value": "2022-03-17",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "timeBetweenInspections",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Time Between Inspections"
+        },
+        {
+          "language": "es",
+          "text": "Tiempo Entre Inspecciones"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Time between inspections"
+        },
+        {
+          "language": "es",
+          "text": "Tiempo entre inspecciones"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "0112/2///62720#UAA407#001"
+          }
+        ]
+      },
+      "inputVariables": [
+        {
+          "value": {
+            "idShort": "lastInspection",
+            "displayName": [
+              {
+                "language": "en",
+                "text": "Last Inspection Date"
+              },
+              {
+                "language": "es",
+                "text": "Fecha de la \u00DAltima Inspecci\u00F3n"
+              }
+            ],
+            "description": [
+              {
+                "language": "en",
+                "text": "Date of the last inspection"
+              },
+              {
+                "language": "es",
+                "text": "Fecha de la \u00FAltima inspecci\u00F3n"
+              }
+            ],
+            "value": {
+              "type": "ModelReference",
+              "referredSemanticId": {
+                "type": "ModelReference",
+                "keys": [
+                  {
+                    "type": "Submodel",
+                    "value": "https://example.com/ids/sm/9025_4140_6052_7699"
+                  },
+                  {
+                    "type": "Property",
+                    "value": "LastMaintenanceDate"
+                  }
+                ]
+              },
+              "keys": []
+            },
+            "modelType": "ReferenceElement"
+          }
+        },
+        {
+          "value": {
+            "idShort": "actualDate",
+            "displayName": [
+              {
+                "language": "en",
+                "text": "Actual Date"
+              },
+              {
+                "language": "es",
+                "text": "Fecha Actual"
+              }
+            ],
+            "description": [
+              {
+                "language": "en",
+                "text": "Actual date"
+              },
+              {
+                "language": "es",
+                "text": "Fecha actual"
+              }
+            ],
+            "valueType": "xs:date",
+            "value": "2025-06-01",
+            "modelType": "Property"
+          }
+        }
+      ],
+      "outputVariables": [
+        {
+          "value": {
+            "idShort": "timeBetweenInspections",
+            "displayName": [
+              {
+                "language": "en",
+                "text": "Time Between Inspections"
+              },
+              {
+                "language": "es",
+                "text": "Tiempo Entre Inspecciones"
+              }
+            ],
+            "description": [
+              {
+                "language": "en",
+                "text": "Number of days since the last inspection"
+              },
+              {
+                "language": "es",
+                "text": "N\u00FAmero de d\u00EDas desde la \u00FAltima inspecci\u00F3n"
+              }
+            ],
+            "semanticId": {
+              "type": "ModelReference",
+              "keys": [
+                {
+                  "type": "ConceptDescription",
+                  "value": "0112/2///62720#UAA407#001"
+                }
+              ]
+            },
+            "valueType": "xs:int",
+            "value": "0",
+            "modelType": "Property"
+          }
+        }
+      ],
+      "modelType": "Operation"
+    },
+    {
+      "idShort": "failures",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Failures"
+        },
+        {
+          "language": "es",
+          "text": "Fallas"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Failures or structural deformation found during maintenance"
+        },
+        {
+          "language": "es",
+          "text": "Fallas o deformaciones estructurales encontradas durante el mantenimiento"
+        }
+      ],
+      "valueType": "xs:string",
+      "value": "\u0022FALLAS\u0022",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "taskPerformed",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Tasks Performed"
+        },
+        {
+          "language": "es",
+          "text": "Tareas Realizadas"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Detail of modifications or repairs done"
+        },
+        {
+          "language": "es",
+          "text": "Detalle de modificaciones o reparaciones hechas"
+        }
+      ],
+      "valueType": "xs:string",
+      "value": "\u0022None\u0022",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "maintenanceInstructions",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Maintenance Instructions"
+        },
+        {
+          "language": "es",
+          "text": "Instrucciones de Mantenimiento"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "File with instructions on how to perform rack maintenance"
+        },
+        {
+          "language": "es",
+          "text": "Archivo con instrucciones sobre como realizar el mantenimiento del rack"
+        }
+      ],
+      "contentType": "",
+      "modelType": "File"
+    },
+    {
+      "idShort": "installationDate",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Installation Date"
+        },
+        {
+          "language": "es",
+          "text": "Fecha de Instalaci\u00F3n"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Installation date of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Fecha de instalaci\u00F3n del racl"
+        }
+      ],
+      "value": {
+        "type": "ModelReference",
+        "referredSemanticId": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://example.com/ids/sm/0504_6122_5052_9637"
+            },
+            {
+              "type": "Property",
+              "value": "InstallationDate"
+            }
+          ]
+        },
+        "keys": []
+      },
+      "modelType": "ReferenceElement"
+    },
+    {
+      "idShort": "manufacturingDate",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Manufacturing Date"
+        },
+        {
+          "language": "es",
+          "text": "Fecha de Fabricaci\u00F3n"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Manufacturing date of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Fecha de fabricaci\u00F3n del rack"
+        }
+      ],
+      "value": {
+        "type": "ModelReference",
+        "referredSemanticId": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://admin-shell.io/idta/SubmodelTemplate/DigitalNameplate/3/0"
+            },
+            {
+              "type": "Property",
+              "value": "DateOfManufacture"
+            }
+          ]
+        },
+        "keys": []
+      },
+      "modelType": "ReferenceElement"
+    },
+    {
+      "idShort": "location",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Location"
+        },
+        {
+          "language": "es",
+          "text": "Ubicaci\u00F3n"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Location of the rack in the warehouse"
+        },
+        {
+          "language": "es",
+          "text": "Ubicaci\u00F3n del rack dentro del almacen"
+        }
+      ],
+      "value": {
+        "type": "ModelReference",
+        "referredSemanticId": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://example.com/ids/sm/0504_6122_5052_9637"
+            },
+            {
+              "type": "Property",
+              "value": "Location"
+            }
+          ]
+        },
+        "keys": []
+      },
+      "modelType": "ReferenceElement"
+    },
+    {
+      "idShort": "operationConditions",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Operation Conditions"
+        },
+        {
+          "language": "es",
+          "text": "Condiciones de Operaci\u00F3n"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Temperature to which the rack is exposed during operation"
+        },
+        {
+          "language": "es",
+          "text": "Temperatura a la que est\u00E1 expuesto el rack durante la operaci\u00F3n"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/9542_6121_6052_8985"
+          }
+        ]
+      },
+      "value": {
+        "type": "ModelReference",
+        "referredSemanticId": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://example.com/ids/sm/8123_6122_5052_0686"
+            },
+            {
+              "type": "Property",
+              "value": "Temperature"
+            }
+          ]
+        },
+        "keys": []
+      },
+      "modelType": "ReferenceElement"
+    }
+  ],
+  "modelType": "Submodel"
+}

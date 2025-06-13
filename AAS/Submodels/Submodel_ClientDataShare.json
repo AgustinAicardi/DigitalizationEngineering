@@ -1,0 +1,55 @@
+{
+  "idShort": "ClientDataShare",
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel containing data that could be shared with the maintenance company"
+    }
+  ],
+  "id": "https://example.com/ids/sm/9052_5140_6052_6876",
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "idShort": "stockAvailable",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Stock Available"
+        },
+        {
+          "language": "es",
+          "text": "Stock Disponible"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Amount of products available for selling"
+        },
+        {
+          "language": "es",
+          "text": "Cantidad de productos disponibles para la venta"
+        }
+      ],
+      "value": {
+        "type": "ModelReference",
+        "referredSemanticId": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://example.com/ids/sm/8123_6122_5052_0686"
+            },
+            {
+              "type": "Property",
+              "value": "NumberOfProducts"
+            }
+          ]
+        },
+        "keys": []
+      },
+      "modelType": "ReferenceElement"
+    }
+  ],
+  "modelType": "Submodel"
+}

@@ -1,0 +1,345 @@
+{
+  "idShort": "TechnicalData",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "TechnicalData"
+    }
+  ],
+  "id": "https://example.com/ids/sm/0504_6122_5052_9637",
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "idShort": "rackID",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Rack ID"
+        },
+        {
+          "language": "es",
+          "text": "ID del Rack"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Unique identifier of the rack "
+        },
+        {
+          "language": "es",
+          "text": "Identificador \u00FAnico del rack"
+        }
+      ],
+      "valueType": "xs:string",
+      "value": "\u0022RACK-001\u0022",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "lengthSize",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Length Size"
+        },
+        {
+          "language": "es",
+          "text": "Largo"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Lenght size of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Largo del rack"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/1152_6121_6052_6755"
+          }
+        ]
+      },
+      "valueType": "xs:double",
+      "value": "0.00",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "widthSize",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Width Size"
+        },
+        {
+          "language": "es",
+          "text": "Ancho"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Width size of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Ancho del rack"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/1152_6121_6052_6755"
+          }
+        ]
+      },
+      "valueType": "xs:double",
+      "value": "0.00",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "heightSize",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Height Size"
+        },
+        {
+          "language": "es",
+          "text": "Alto"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Height size of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Alto del rack"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/1152_6121_6052_6755"
+          }
+        ]
+      },
+      "valueType": "xs:double",
+      "value": "0.00",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "storagedProductType",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Storaged Product Type"
+        },
+        {
+          "language": "es",
+          "text": "Tipo de Producto Almacenado"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": " Type of product storage"
+        },
+        {
+          "language": "es",
+          "text": "Tipo de producto almacenado"
+        }
+      ],
+      "valueType": "xs:string",
+      "value": "\u0022Boxes\u0022",
+      "modelType": "Property"
+    },
+    {
+      "category": "",
+      "idShort": "useInstructions",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Use Instructions"
+        },
+        {
+          "language": "es",
+          "text": "Instrucciones de Uso"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "File with the instructions for use"
+        },
+        {
+          "language": "es",
+          "text": "Archivo con las instrucciones de uso"
+        }
+      ],
+      "contentType": "",
+      "modelType": "File"
+    },
+    {
+      "idShort": "location",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Location"
+        },
+        {
+          "language": "es",
+          "text": "Ubicaci\u00F3n"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Location of the rack inside the warehouse"
+        },
+        {
+          "language": "es",
+          "text": "Ubicaci\u00F3n del rack dentro del almacen"
+        }
+      ],
+      "valueType": "xs:string",
+      "value": "\u0022AA-BB-CC-01\u0022",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "storagedID",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Storaged ID"
+        },
+        {
+          "language": "es",
+          "text": "ID Almacenado"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "ID of the storaged products"
+        },
+        {
+          "language": "es",
+          "text": "ID de los productos almacenados"
+        }
+      ],
+      "valueType": "xs:string",
+      "value": "\u0022ABC123\u0022",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "surfaceAvailable",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Availabe Surface"
+        },
+        {
+          "language": "es",
+          "text": "Superficie Disponible"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Total available surface"
+        },
+        {
+          "language": "es",
+          "text": "Superficie total disponible"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/6342_6121_6052_4479"
+          }
+        ]
+      },
+      "valueType": "xs:double",
+      "value": "0.00",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "installationDate",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Installation Date"
+        },
+        {
+          "language": "es",
+          "text": "Fecha de Instalaci\u00F3n"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Installation date of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Fecha de instalaci\u00F3n del rack"
+        }
+      ],
+      "valueType": "xs:date",
+      "value": "2022-07-31",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "supportedWeight",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Supported Weight"
+        },
+        {
+          "language": "es",
+          "text": "Peso Soportado"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Total supported weight of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Peso total soportado por el rack"
+        }
+      ],
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "ConceptDescription",
+            "value": "https://example.com/ids/cd/9332_6121_6052_2224"
+          }
+        ]
+      },
+      "valueType": "xs:double",
+      "value": "0.00",
+      "modelType": "Property"
+    }
+  ],
+  "modelType": "Submodel"
+}

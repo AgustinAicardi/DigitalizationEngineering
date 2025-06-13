@@ -1,0 +1,40 @@
+{
+  "idShort": "RecyclingDataShare",
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel containing data that could be shared with the recycling company"
+    }
+  ],
+  "id": "https://example.com/ids/sm/4315_4140_6052_1006",
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "idShort": "degradationLevel",
+      "displayName": [
+        {
+          "language": "en",
+          "text": "Degradation Level"
+        },
+        {
+          "language": "es",
+          "text": "Nivel de Degradaci\u00F3n"
+        }
+      ],
+      "description": [
+        {
+          "language": "en",
+          "text": "Wear and degradation level of the rack"
+        },
+        {
+          "language": "es",
+          "text": "Nivel de desgaste y degradaci\u00F3n del rack"
+        }
+      ],
+      "valueType": "xs:string",
+      "value": "\u0022LOW\u0022",
+      "modelType": "Property"
+    }
+  ],
+  "modelType": "Submodel"
+}
