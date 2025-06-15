@@ -1,20 +1,23 @@
 # OPC UA Server with Asset Administration Shell (AAS) Integration
 
-This project demonstrates the implementation of an OPC UA server that loads and exposes an Asset Administration Shell (AAS) model using the asyncua library. The server periodically updates property values, exposes a remote operation, and supports multiple monitoring clients.
+This project demonstrates the implementation of an OPC UA server that loads and exposes an Asset Administration Shell (AAS) model using the asyncua library. The server periodically updates property values, exposes a remote operation, and supports multiple monitoring clients. The Asset Administration Shell (AAS) was created using the AAS Package Explorer.  
 
-<!--
+
 ## Project Structure:
 
+**AAS** : Contains the main AAS files and the individual submodels.  
+├── Submodels: Folder with all the submodels exported in json format.  
+├── `AAS_Digitalization.aasx`: Asset Administration Shell exported in AASX format.  
+└── `AAS_Digitalization.xml`: XML representation of the AAS.
 
-├── AAS_rack.xml -> XML version of the AAS model (imported by the server)  
-├── server.py -> Main OPC UA server with property updates and operation  
-├── monitor_client.py -> Basic client that prints property values  
-├── monitor_client_rich.py -> Same client with enhanced terminal UI using "rich"  
-├── method_client.py -> Client that invokes the server-side operation  
-├── aas_files/ -> Optional folder containing full AAS (.aasx, .json)  
-│ ├── your_model.json  
-│ └── your_model.aasx  
--->
+**ServerOPCUA** : OPC UA server and client implementations for interacting with the digitalized rack.  
+├── `AAS_rack.xml`: XML nodeset file used by the OPC UA server.  
+├── `server.py`: OPC UA server implementation.  
+├── `clientOperation.py`: Client to execute the server’s remote operation.  
+├── `clientValues.py`: Client to monitor and read property values from the server.  
+├── `clientValuesDisplay.py`: Additional client for displaying monitored values.  
+└── `serverCheck.py`: Utility client or script for server verification.
+
 
 ## Features:
 
@@ -29,38 +32,47 @@ This project demonstrates the implementation of an OPC UA server that loads and 
 - Support multiple clients simultaneously
 
 - Display live data with a terminal UI using the "rich" library
-<!--
-## Requirements:
 
-- Install dependencies using pip: `pip install asyncua rich`
 
-Tested with Python 3.9+
+## How to Run
 
-## How to Run:
+1. **Requirements**  
+   - Python 3.7 or higher  
+   - Install required libraries with:  
+     ```bash
+     pip install asyncua asyncio
+     ```
 
-- Start the server:
-`python server.py`
+2. **Prepare Files**  
+   - Make sure the XML file to be used by the server (`AAS_rack.xml` or the desired nodeset) is in the same folder as the server script (`server.py`).
+   - The XML was exported from the OPC UA Nodeset2.xml option of version 3.0 of the corresponding software, dated 10.06.2024.
 
-- Start a simple monitoring client:
-`python monitor_client.py`
+  > **Note on XML modification:**  
+  > The XML file exported from the AASX package required manual adjustments before being usable in the OPC UA server. Specifically, the "AssetAdminShell" UAObject element, originally located near the end of the XML file, was cut and moved to the beginning of the document to ensure correct object hierarchy.  
+  > Additionally, the following reference line was added to maintain proper backward referencing and organize the nodes correctly:  
+  > ```xml
+  > <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
+  > ```  
+  > These changes were necessary to enable the server to correctly load and navigate the AAS model.
 
-- Or run the rich UI monitoring client:
-`python monitor_client_rich.py`
 
-- Use the method invocation client:
-`python method_client.py`
+3. **Run the Server**  
+   - Execute the OPC UA server:  
+     ```bash
+     python server.py
+     ```  
+   - The server will start and expose the AAS model.
 
-You will be prompted to enter a number, which is divided by the "AvailableSurface" property on the server. If the input exceeds the limit, an error message will appear and you can try again.
--->
-## AAS Integration:
+4. **Run the Clients**  
+   - Open a new terminal window for each client you want to run.  
+   - To monitor values:  
+     ```bash
+     python clientValuesDisplay.py
+     ```  
+   - To execute the remote operation:  
+     ```bash
+     python clientOperation.py
+     ```  
 
-The AAS model is defined in AAS_rack.xml and imported automatically by the server.
-
-Full AAS representations (.json, .aasx) are included in the AAS.
-
-The model is based on the principles of Industry 4.0 and RAMI 4.0.
-
-Notes:
-
-The server starts even if there are broken references or missing parent nodes in the XML.
+The clients connect to the server at `opc.tcp://localhost:4840/` by default.
 
